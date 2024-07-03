@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Consultas | La hormiguita Viajera</title>
+    <link rel="icon" type="image/x-icon" href="../static/img/logoazul.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Rubik&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+    <script src="https://kit.fontawesome.com/f3cd9eb1cb.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <main class="consultasMain">
+        <h3 class="title">LISTADO DE CONSULTAS</h3>
+
+
+        <div class="alert" id="myAlert">
+
+            {% with messages = get_flashed_messages() %}
+            <!-- guarda los mensajes del metodo flash en una variafble messages -->
+            {% if messages %}
+            {% for message in messages %}
+
+                <p class="messageFlash">{{message}}
+                    <button type="button" class="btn-close" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                </p>
+        
+            {% endfor%}
+            {% endif %}
+            {%endwith%}
+        </div>
+
+        <div class="contenedorConsultas">
+            <table class="tablaConsultas">
+                <thead>
+                    <tr>
+                        <td>Nombre</td>
+                        <td>Apellido</td>
+                        <td>Email</td>
+                        <td>Telefono</td>
+                        <td>Fecha de viaje</td>
+                        <td>Cant. Pax</td>
+                        <td>Recomendacion</td>
+                        <td>Consulta</td>
+                    </tr>
+                </thead>
+                <tbody>
+                    {% for consulta in consultas %}
+                    <tr>
+                        <td>{{consulta.1}}</td>
+                        <td>{{consulta.2}}</td>
+                        <td>{{consulta.3}}</td>
+                        <td>{{consulta.4}}</td>
+                        <td>{{consulta.5}}</td>
+                        <td>{{consulta.6}}</td>
+                        <td>{{consulta.7}}</td>
+                        <td>{{consulta.8}}</td>
+                        <td>
+                            <a href="/edit/{{consulta.0}}" class="btn editbtn">Edit</a>
+                        </td>
+                        <td>
+                            <a href="/delete/{{consulta.0}}" class="btn deletebtn btn-delete">Delete</a>
+                        </td>    
+                        
+                    </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+        </div>
+
+        <div class="parrafoListadoConsultas">
+            <p class="parrafoBackInicio">volver al <a class="backInicio" href="{{ url_for('Index') }}">INICIO</a></p>
+        </div>
+    </main> 
+    <script src="{{url_for('static', filename='js/confirmation.js')}}"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', (event) => {
+            // Selecciona todos los botones de cierre
+            var closeButtons = document.querySelectorAll('.btn-close');
+    
+            closeButtons.forEach(function(button) {
+                button.addEventListener('click', function() {
+                    // Encuentra el contenedor de la alerta del botón específico y ocúltalo
+                    var alert = button.parentElement;
+                    alert.classList.add('hidden');
+                });
+            });
+        });
+    </script>
+</body>
+
+
+</html>

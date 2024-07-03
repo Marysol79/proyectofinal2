@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quienes somos? | La Hormiga Voladora</title>
+    <link rel="icon" type="image/x-icon" href="../static/img/logoazul.png">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Rubik&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/partials/glide.core.min.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/partials/glide.theme.min.css') }}">
+    <script src="https://kit.fontawesome.com/f3cd9eb1cb.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <header class="header">
+        <div><a href="{{ url_for('Index') }}"><img class="logoMain" src="../static/img/logoazul.png" alt="logo de una hormiga viajera"></a></div>
+        <input type="checkbox" id="menu-toggle">
+        <label for="menu-toggle" class="menu-icon">&#9776;</label> 
+        <nav class="headernav">
+            <ul>
+                <li><a class="linkNav" href="{{ url_for('Index') }}">HOME</a></li>
+                <li><a class="linkNav" href="{{ url_for('destinos')}}">DESTINOS</a></li>
+                <li><a class="linkNav" href="{{ url_for('tiposdeviajes')}}">TIPOS DE VIAJES</a></li>
+                <li><a class="linkNav" href="{{ url_for('vuelos')}}">VUELOS</a></li>
+                <li><a class="linkNav" href="{{ url_for('galeria') }}">GALERIA DE FOTOS</a></li>
+                <li><a class="linkNav" href="{{ url_for('formularioConsultas') }}">CONTACTOS</a></li>
+            </ul> 
+        </nav>
+    </header>
+    <main class="mainQS">
+        <div class="containerDescripcion">   
+            <h2 class="title">Quiénes somos?</h2>
+                <div class="parrafoDescripcion">
+                    <p class="quienesSomos">
+                        En nuestro sitio de viajes, nos dedicamos a ofrecerte experiencias inolvidables alrededor del mundo. Con un equipo apasionado por los viajes y expertos en destinos diversos, estamos comprometidos a proporcionarte servicios excepcionales y asesoramiento personalizado. Desde la planificación de tu próximo viaje hasta la atención a cada detalle durante tu aventura, estamos aquí para convertir tus sueños de viaje en realidad. Nuestra misión es inspirarte a explorar nuevos horizontes y crear recuerdos invaluables que perdurarán toda la vida. ¡Únete a nosotros en esta emocionante jornada llena de descubrimientos y experiencias únicas!
+                    </p>
+                </div>
+                <div class="parrafoDescripcion">
+                    <h2 class="subtitulos">Historia y Trayectoria</h2>
+                    <p>
+                        La Hormiga Voladora fue fundada en 2010 con la visión de hacer que los viajes sean accesibles y emocionantes para todos. Desde nuestros humildes comienzos, hemos crecido para ofrecer una amplia gama de servicios de viaje, incluyendo vuelos, alojamientos, y tours personalizados. A lo largo de los años, hemos alcanzado importantes hitos como recibir el premio "Mejor Agencia de Viajes" en 2018.
+                    </p>
+                </div>
+                <div class="parrafoDescripcion">
+                <h2 class="subtitulos">Valores y Cultura</h2>
+                    <p>
+                        Nos guiamos por valores fundamentales como la integridad, la pasión por los viajes, y el compromiso con la satisfacción del cliente. En La Hormiga Voladora, creemos en crear un ambiente de trabajo inclusivo y colaborativo que se traduce en un mejor servicio para nuestros clientes. Nuestro equipo es diverso y cada miembro aporta una perspectiva única que enriquece nuestras ofertas de viaje.
+                    </p>
+                </div>
+        </div>
+        <div class="equipo">
+                <h2 class="subtitulos title">Nuestro Equipo</h2>
+                <div class="miembros">
+                    <div class="miembro-equipo">
+                        <img src="../static/img/Mary.webp" alt="Miembro del equipo">
+                        <h3>Marysol Meza</h3>
+                        <h4>CEO y Fundadora</h4>
+                        <p>Mary fundó La Hormiga Voladora con la misión de compartir su amor por los viajes. Con más de 20 años de experiencia, lidera el equipo con pasión y dedicación.</p>
+                    </div>
+                    <div class="miembro-equipo">
+                        <img src="../static/img/Mati.webp" alt="Miembro del equipo">
+                        <h3>Matias Stancato</h3>
+                        <h4>Director de Operaciones</h4>
+                        <p>Matías se asegura de que cada detalle de tus viajes esté perfectamente coordinado. Su experiencia en logística y planificación de viajes es invaluable para nuestro éxito.</p>
+                    </div>
+                    <div class="miembro-equipo">
+                        <img src="../static/img/Santi.webp" alt="Miembro del equipo">
+                        <h3>Santiago Campellone</h3>
+                        <h4>Especialista en Destinos</h4>
+                        <p>Santi es nuestro experto en destinos exóticos. Conoce los mejores lugares para visitar y las mejores experiencias locales para recomendar a nuestros clientes.</p>
+                    </div>
+                </div>
+        </div>
+        <div class="mapa">
+            <h2 class="subtitulos">Dónde estamos</h2>
+            <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d13624.914338136074!2d-64.18331629999999!3d-31.3802601!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1ses!2sar!4v1715546285538!5m2!1ses!2sar" width="800" height="600" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>
+        <h2 class="subtitulos">Qué dicen nuestros clientes</h2>
+        <div class="clientesContainer">
+            <div class="glide">
+                <div class="glide__track" data-glide-el="track">
+                    <ul class="glide__slides">
+                        <li class="glide__slide">
+                                <div class="clienteCard">
+                                    <h3>Laura</h3>
+                                    <img src="../static/img/usuario3.webp" alt="Usuario3">
+                                    <p>Usar esta agencia de viajes fue una experiencia excelente. Les di mis preferencias y ellos se encargaron de todo, lo que me permitió relajarme y disfrutar del viaje.</p>
+                                </div>
+                        </li>
+                        <li class="glide__slide">
+                            <div class="clienteCard">
+                                <h3>Marcos</h3>
+                                <img src="../static/img/usuario1.webp" alt="Usuario1">
+                                <p>Utilizar esta agencia de viajes fue genial. Solo tuve que decir a dónde quería ir y ellos lo organizaron todo sin complicaciones.</p>
+                            </div>
+                        </li>
+                        <li class="glide__slide">
+                            <div class="clienteCard">
+                                <h3>Jonathan</h3>
+                                <img src="../static/img/usuario2.webp" alt="Usuario2">
+                                <p>¡Esta agencia de viajes lo hizo fácil! Solo les di una idea de lo que quería y ellos se encargaron de todo el resto, ¡Fue un alivio!</p>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+                <div class="glide__arrows" data-glide-el="controls">
+                    <button class="glide__arrow glide__arrow--left" data-glide-dir="&lt;">&lt;</button>
+                    <button class="glide__arrow glide__arrow--right" data-glide-dir="&gt;">&gt;</button>
+                </div>
+            </div>
+        </div>
+    </main>
+    <footer class="footer">
+        <div class="footerSuperior">
+            <div class="parrafoFooter">
+                <h3 class="titleFooter">Sobre nosotros</h3>
+                <ul>
+                    <li><a href="{{ url_for('quienessomos') }}">Quienes somos</a></li>
+                    <li><a href="#">Agencias</a></li>
+                    <li><a href="#">Trabaja con nosotros</a></li>
+                    <li><a href="#">Afiliados</a></li>
+                    <li><a href="#"></a></li>
+                </ul>
+            </div>
+            <div class="parrafoFooter">
+                <h3 class="titleFooter">Planea tus viajes</h3>
+                <ul>
+                    <li><a href="#">Blog de viajes</a></li>
+                    <li><a href="#">Guia de viajes</a></li>
+                    <li><a href="#">Catalogos</a></li>
+                    <li><a href="#">Turismo accesible</a></li>
+                    <li><a href="#">Viajes de lujo</a></li>
+                </ul>
+            </div>
+            <div class="parrafoFooter">
+                <h3 class="titleFooter">Informacion importante</h3>
+                <ul>
+                    <li><a href="#">Condiciones generales</a></li>
+                    <li><a href="#">Politica de privacidad</a></li>
+                    <li><a href="#">Centro de ayuda</a></li>
+                    <li><a href="#">Politica de cookies</a></li>
+                </ul>
+            </div>
+            <div class="redesSociales">
+                <h3 class="titleFooter">Seguinos en:</h3>
+                <ul>
+                    <li><a href="#"><i class="fa-brands fa-square-facebook iconosRedes"></i></a></li>
+                    <li><a href="#"><i class="fa-brands fa-instagram iconosRedes"></i></a></li>
+                    <li><a href="#"><i class="fa-brands fa-youtube iconosRedes"></i></a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footerInferior">
+            <p class="parrafoFooter">La Hormiguita viajera | todos los derechos reservados.</p>
+        </div>
+    </footer>
+    <script src="https://cdn.jsdelivr.net/npm/@glidejs/glide"></script>
+    <script>
+        // Definir una función para inicializar Glide con la configuración adecuada
+        function initializeGlide() {
+            // Obtener el ancho de la ventana
+            const screenWidth = window.innerWidth;
+    
+            // Configurar el número de vistas según el ancho de la ventana
+            const perView = screenWidth < 768 ? 1 : 3;
+    
+            // Configuración de Glide
+            const config = {
+                type: 'carousel',
+                perView: perView
+            };
+        new Glide('.glide', config).mount();
+        }
+        
+        document.addEventListener('DOMContentLoaded', initializeGlide);
+
+        initializeGlide();
+    </script>
+</body>
+</html>

@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title> Gracias! | La hormiga viajera </title>
+        <link rel="icon" type="image/x-icon" href="../static/img/logoazul.png">
+        <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Rubik&display=swap" rel="stylesheet">
+        <script src="https://kit.fontawesome.com/f3cd9eb1cb.js" crossorigin="anonymous"></script>
+    </head>
+<body>
+    <header class="header">
+        <div><a href="{{ url_for('Index') }}"><img  class="logoMain" src="../static/img/logoazul.png" alt="logo de una hormiga viajera"></a></div>
+        <input type="checkbox" id="menu-toggle" />
+        <label for="menu-toggle" class="menu-icon">&#9776;</label> 
+        <nav class="headernav">
+                <ul>
+                    <li><a class="linkNav" href="{{ url_for('Index') }}">HOME</a></li>
+                    <li><a class="linkNav" href="{{ url_for('destinos')}}">DESTINOS</a></li>
+                    <li><a class="linkNav" href="{{ url_for('vuelos') }}">VUELOS</a></li>
+                    <li><a class="linkNav" href="{{ url_for('galeria') }}">GALERIA DE FOTOS</a></li>
+                    <li><a class="linkNav" href="{{ url_for('quienessomos') }}">¿QUIENES SOMOS?</a></li>
+                    <li><a class="linkNav" href="{{ url_for('formularioConsultas') }}">CONTACTOS</a></li>
+                </ul> 
+            </nav>
+    </header>
+<main class="mainSuccess">    
+    <div class="success-animation">
+        <h2 class="titleSuccess">Tu consulta fue enviada exitosamente</h2>
+        <p>Muy pronto nos pondremos en contacto. ¡Muchas gracias!</p>
+    </div>
+</main>    
+    <footer class="footer" >
+        <div class= "footerSuperior">
+            <span class="parrafoFooter">
+                <h3 class="titleFooter">Sobre nosotros</h3>
+                <ul>
+                    <li><a href="{{ url_for('quienessomos') }}">Quienes somos</a></li>
+                    <li><a href="">Agencias</a></li>
+                    <li><a href="">Trabaja con nosotros</a></li>
+                    <li><a href="">Afiliados</a></li>
+                    <li><a href=""></a></li>
+                </ul>
+            </span>
+            <span class="parrafoFooter">
+                <h3 class="titleFooter">Planea tus viajes</h3>
+                <ul>
+                    <li><a href="">Blog de viajes</a></li>
+                    <li><a href="">Guia de viajes</a></li>
+                    <li><a href="">Catalogos</a></li>
+                    <li><a href="">Turismo accesible</a></li>
+                    <li><a href="">Viajes de lujo</a></li>
+                </ul>
+            </span>
+            <span class="parrafoFooter">
+                <h3 class="titleFooter">Informacion importante</h3>
+                <ul>
+                    <li><a href="">Condiciones generales</a></li>
+                    <li><a href="">Politica de privacidad</a></li>
+                    <li><a href="">Centro de ayuda</a></li>
+                    <li><a href="">Politica de cookies</a></li>
+                </ul>
+            </span>
+            <div class="redesSociales">
+                <h3 class="titleFooter">Seguinos en:</h3>
+                <ul>
+                    <li><a href=""><i class="fa-brands fa-square-facebook iconosRedes"></i></a></li>
+                    <li><a href=""><i class="fa-brands fa-instagram iconosRedes"></a></i></li>
+                    <li><a href=""><i class="fa-brands fa-youtube iconosRedes"></i></a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footerInferior">
+            <p class="parrafoFooter">La Hormiguita viajera | todos los derechos reservados.</p>
+        </div>
+    </footer>
+</body>
+</html>

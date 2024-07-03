@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Editar | La hormiguita Viajera</title>
+    <link rel="icon" type="image/x-icon" href="../static/img/logoazul.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Rubik&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+    <script src="https://kit.fontawesome.com/f3cd9eb1cb.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+
+    <h3 class="title">EDITAR CONSULTAS</h3>
+
+    <div class="editContainer">
+        <form id="contactForm" action="/update/{{consulta.0}}" method="POST" class="formularioEditar">
+            <div class="form-group">
+                <label for="firstName">Nombre(*):</label>
+                <input type="text" name="nombre" placeholder="Fullname" value="{{consulta.1}}" class="form-control">
+            </div>
+            <div class="form-group">
+                <label for="lastName">Apellido(*):</label>
+                <input type="text" name="apellido" placeholder="Apellido" value="{{consulta.2}}" class="form-control">
+            </div>
+            <div class="form-group">
+                <label for="email">Email(*):</label>
+                <input type="email" name="email" placeholder="Email" value="{{consulta.3}}" class="form-control">
+            </div>
+            <div class="form-group">
+                <label for="phone">Número de Celular(*):</label>
+                <input type="number" name="phone" placeholder="Telefono" value="{{consulta.4}}" class="form-control">
+            </div>
+            <div class="form-group">
+                <label for="travelDate">Fecha de Viaje:</label>
+                <input type="date" name="travelDate" placeholder="Fecha de viaje" value="{{consulta.5}}"
+                    class="form-control">
+            </div>
+            <div class="form-group">
+                <label for="passengers">Cantidad de Pasajeros:</label>
+                <input type="number" name="passengers" placeholder="Numero de pasajeros" value="{{consulta.6}}"
+                    class="form-control">
+            </div>
+            <div class="form-group">
+            <label for="howDidYouFindUs">¿Cómo nos conociste?</label>
+            <br>
+            <select id="howDidYouFindUs" name="howDidYouFindUs">
+                
+                <option value="search">Búsqueda en línea</option>
+                <option value="friend">Recomendación de un amigo</option>
+                <option value="social">Redes sociales</option>
+                <option value="other">Otro</option>
+            </select>
+            </div>
+            <div class="form-group">
+                <label for="message">Consulta(*):</label>
+                <input  type="text" name="message" placeholder="Consulta:" value="{{consulta.8}}" class="form-control textConsulta">
+            </div>
+            <div class="form-group">
+                <button type="submit" class="btnEdit">
+                    Editar
+                </button>
+            </div>
+        </form>
+        <div class="parrafoListadoConsultas">
+            <p class="parrafoBackInicio">volver al <a class="backInicio" href="{{ url_for('list_consultas') }}">LISTADO</a></p>
+        </div>
+    </div>
+</body>
+
+</html>

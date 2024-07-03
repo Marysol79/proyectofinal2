@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Tipos de viajes | La hormiga viajera </title>
+    <link rel="icon" type="image/x-icon" href="../static/img/logoazul.png">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Rubik&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/f3cd9eb1cb.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <header class="header">
+        <div><a href="{{ url_for('Index') }}"><img  class="logoMain" src="../static/img/logoazul.png" alt="logo de una hormiga viajera"></a></div>
+        <input type="checkbox" id="menu-toggle">
+        <label for="menu-toggle" class="menu-icon">&#9776;</label> 
+        <nav class="headernav">
+                <ul>
+                    <li><a class="linkNav" href="{{ url_for('Index') }}">HOME</a></li>
+                    <li><a class="linkNav" href="{{ url_for('destinos')}}">DESTINOS</a></li>
+                    <li><a class="linkNav" href="{{ url_for('vuelos')}}">VUELOS</a></li>
+                    <li><a class="linkNav" href="{{ url_for('galeria') }}">GALERIA DE FOTOS</a></li>
+                    <li><a class="linkNav" href="{{ url_for('quienessomos') }}">¿QUIENES SOMOS?</a></li>
+                    <li><a class="linkNav" href="{{ url_for('formularioConsultas') }}">CONTACTOS</a></li>
+                </ul> 
+            </nav>
+    </header>
+    <main class="viajesMain">
+            <div class="contenedorViajes">
+                <h2 class="title">Tipos de Viajes</h2>
+                <div class="contenedorTipos">
+                    <a class="tiposLink" href="#">
+                        <div class="tipos">
+                            <h3 class="tiposTitle">Viajes de Aventura</h3>
+                            <p class="tiposParrafo"> Estos viajes están diseñados para aquellos que buscan emociones fuertes y experiencias fuera de lo común. Pueden incluir actividades como senderismo en montañas, rafting en ríos, safari en la selva, buceo en arrecifes de coral, entre otros.
+                            </p>
+                            <div class="animacionImg"><img src="../static/img/pexels-dreamypixel-547116.webp" alt="Viajero en aventura">
+                            </div>
+                        </div>
+                    </a>
+                    <a class="tiposLink" href="#">
+                        <div class="tipos">
+                        <h3 class="tiposTitle">Viajes Culturales</h3>
+                            <p class="tiposParrafo">Perfectos para quienes desean sumergirse en la historia, arte y cultura de diferentes destinos. Estos viajes pueden incluir visitas a museos, monumentos históricos, festivales locales, recorridos por sitios arqueológicos y experiencias culinarias auténticas.</p>
+                            <div class="animacionImg"><img src="../static/img/piramides.webp" alt="Piramides">
+                            </div>
+                        </div>
+                    </a>
+                    <a class="tiposLink" href="#">  
+                        <div class="tipos">
+                        <h3 class="tiposTitle">Viajes de Relax y Bienestar</h3>
+                        <p class="tiposParrafo">Ideales para aquellos que buscan rejuvenecer cuerpo y mente. Estos viajes pueden incluir estancias en resorts de lujo con spa, retiros de yoga y meditación, clases de cocina saludable, y actividades al aire libre como yoga o caminatas tranquilas por la naturaleza.</p>
+                        <div class="animacionImg"><img src="../static/img/pexels-enric-cruz-lopez-6039244.webp" alt="Cartel las Vegas">
+                        </div>
+                        </div>
+                    </a>
+                    <a class="tiposLink" href="#">
+                        <div class="tipos">
+                        <h3 class="tiposTitle">Viajes Familiares</h3>
+                        <p class="tiposParrafo">Dirigidos a familias que desean crear recuerdos inolvidables juntos. Estos viajes pueden adaptarse para satisfacer las necesidades de todas las edades e incluir actividades como parques temáticos, excursiones familiares.</p>
+                        <div class="animacionImg"><img src="../static/img/familytravel.webp" alt="familia posando para foto">
+                        </div>
+                        </div>
+                    </a>
+                    <a class="tiposLink" href="#">
+                        <div class="tipos">
+                        <h3 class="tiposTitle">Viajes de Luna de Miel y Románticos</h3>
+                        <p class="tiposParrafo">Pensados para parejas que buscan celebrar su amor en entornos idílicos. Estos viajes pueden incluir escapadas a destinos exóticos, cenas románticas a la luz de las velas, paseos en barco al atardecer, alojamientos exclusivos y experiencias privadas diseñadas para dos.</p>
+                        <div class="animacionImg"><img src="../static/img/lunademiel.webp" alt="Pareja abrazada">
+                        </div>
+                        </div>
+                    </a>
+                </div>
+            </div>
+    </main>
+    <footer class="footer" >
+        <div class="footerSuperior">
+            <div class="parrafoFooter">
+                <h3 class="titleFooter">Sobre nosotros</h3>
+                <ul>
+                    <li><a href="{{ url_for('quienessomos') }}">Quienes somos</a></li>
+                    <li><a href="#">Agencias</a></li>
+                    <li><a href="#">Trabaja con nosotros</a></li>
+                    <li><a href="#">Afiliados</a></li>
+                </ul>
+            </div>
+            <div class="parrafoFooter">
+                <h3 class="titleFooter">Planea tus viajes</h3>
+                <ul>
+                    <li><a href="#">Blog de viajes</a></li>
+                    <li><a href="#">Guia de viajes</a></li>
+                    <li><a href="#">Catalogos</a></li>
+                    <li><a href="#">Turismo accesible</a></li>
+                    <li><a href="#">Viajes de lujo</a></li>
+                </ul>
+            </div>
+            <div class="parrafoFooter">
+                <h3 class="titleFooter">Informacion importante</h3>
+                <ul>
+                    <li><a href="#">Condiciones generales</a></li>
+                    <li><a href="#">Politica de privacidad</a></li>
+                    <li><a href="#">Centro de ayuda</a></li>
+                    <li><a href="#">Politica de cookies</a></li>
+                </ul>
+            </div>
+            <div class="redesSociales">
+                <h3 class="titleFooter">Seguinos en:</h3>
+                <ul>
+                    <li><a href="#"><i class="fa-brands fa-square-facebook iconosRedes"></i></a></li>
+                    <li><a href="#"><i class="fa-brands fa-instagram iconosRedes"></i></a></li>
+                    <li><a href="#"><i class="fa-brands fa-youtube iconosRedes"></i></a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footerInferior">
+            <p class="parrafoFooter">La Hormiguita viajera | todos los derechos reservados.</p>
+        </div>
+    </footer>
+</body>
+</html>

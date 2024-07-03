@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home | La hormiguita Viajera</title>
+    <link rel="icon" type="image/x-icon" href="../static/img/logoazul.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Rubik&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/partials/glide.core.min.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/partials/glide.theme.min.css') }}">
+    <script src="https://kit.fontawesome.com/f3cd9eb1cb.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <header class="header">
+        <div><a href="{{ url_for('Index') }}"><img  class="logoMain" src="../static/img/logoazul.png" alt="logo de una hormiga viajera"></a></div>
+        <input type="checkbox" id="menu-toggle">
+        <label for="menu-toggle" class="menu-icon">&#9776;</label> 
+        <nav class="headernav">
+                <ul>
+                    <li><a class="linkNav" href="{{ url_for('destinos') }}">DESTINOS</a></li>
+                    <li><a class="linkNav" href="{{ url_for('tiposdeviajes')}}">TIPOS DE VIAJES</a></li>
+                    <li><a class="linkNav" href="{{ url_for('vuelos')}}">VUELOS</a></li>
+                    <li><a class="linkNav" href="{{ url_for('galeria') }}">GALERIA DE FOTOS</a></li>
+                    <li><a class="linkNav" href="{{ url_for('quienessomos') }}">¿QUIENES SOMOS?</a></li>
+                    <li><a class="linkNav" href="{{ url_for('formularioConsultas') }}">CONTACTOS</a></li>
+                    <li><a class="linkNav" href="{{ url_for('list_consultas') }}">LISTADO DE CONSULTAS</a></li>
+                    <li><a class="linkNav inicioSesion" href="{{ url_for('inisesion') }}">INICIA SESION</a></li>
+                </ul> 
+            </nav>
+    </header>
+    <main class="homeMain">
+            <div class="slideshow-container">
+                <div class="mySlides fade">
+                    <img class="imgSlider" src="../static/img/i1.webp" alt="Grecia" >
+                    <div class="text">Grecia</div>
+                </div>
+                <div class="mySlides fade">
+                    <img class="imgSlider" src="../static/img/i2.webp" alt="Playa">
+                    <div class="text">Playa</div>
+                </div>
+                <div class="mySlides fade">
+                    <img class="imgSlider" src="../static/img/i3.webp" alt="ciudad" >
+                    <div class="text">Ciudad</div>
+                </div>
+                <div class="mySlides fade">
+                    <img class="imgSlider" src="../static/img/i4.webp" alt="Actividades" >
+                    <div class="text">Actividades</div>
+                </div>
+                <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+                <a class="next" onclick="plusSlides(1)">&#10095;</a>
+            </div>  
+            <div style="text-align:center">
+                <span class="dot" onclick="currentSlide(1)"></span>
+                <span class="dot" onclick="currentSlide(2)"></span>
+                <span class="dot" onclick="currentSlide(3)"></span>
+                <span class="dot" onclick="currentSlide(4)"></span>
+            </div> 
+        <div class="contenedorHome">
+            <h1 class="title tituloPrincipal">La hormiguita Viajera</h1>
+            <p class="parrafoHome parrafoContainer">Bienvenido a La hormiga Viajera, tu puerta de entrada a aventuras inolvidables y experiencias de viaje excepcionales. En La hormiga Viajera, nos dedicamos a hacer realidad tus sueños de viaje, ofreciéndote un servicio personalizado y experto en la planificación de tus escapadas. Ya sea que busques unas vacaciones relajantes en la playa, una emocionante expedición de aventura o un viaje cultural enriquecedor, estamos aquí para convertir tus deseos en realidad. Descubre el mundo con nosotros y déjanos encargarnos de todos los detalles para que tú solo te preocupes por disfrutar. <br><strong>¡Bienvenido a una nueva era de viajes extraordinarios!</strong></p>
+            <div class="cardContenier">
+                    <div class="card">
+                        <a class="aCard" href="#">
+                        <h2 class="titleCard">INDIA</h2>
+                        <img class="imgCard" src="../static/img/indiaCard.webp" alt="india taj majal">
+                        <p class="pCardUp">10 Dias de hotel + aereos</p>
+                        <p class="parrafoCard">$500</p>
+                        <div class="animacionCard"><img src="../static/img/indiahover.webp" alt="India">
+                        </div>
+                        </a>
+                    </div>    
+                    <div class="card">
+                        <a class="aCard" href="#">
+                        <h2 class="titleCard">FAMILIA</h2>
+                        <img class="imgCard" src="../static/img/familiaCard.webp" alt="familia posando para la foto">
+                        <p class="pCardUp">Diversion para grandes y chicos</p>
+                        <p class="parrafoCard">$2200</p>
+                        <div class="animacionCard"><img src="../static/img/familyhover.webp" alt="India">
+                        </div>
+                        </a>
+                    </div>
+                    <div class="card">
+                        <a class="aCard" href="#">
+                        <h2 class="titleCard">BRASIL</h2>
+                        <img class="imgCard" src="../static/img/brasilCard.webp" alt="playa">
+                        <p class="pCardUp">Diversion, comida y mucho más!</p>
+                        <p class="parrafoCard">$800</p>
+                        <div class="animacionCard"><img src="../static/img/brasilHover.webp" alt="India">
+                        </div>
+                        </a>
+                    </div>
+                    <div class="card">
+                            <a class="aCard" href="#">    
+                            <h2 class="titleCard">PAREJAS</h2>
+                            <img class="imgCard" src="../static/img/parejaCard.webp" alt="pareja mirando un mapa">
+                            <p class="pCardUp">Viajá con tu mejor compania!</p>
+                            <p class="parrafoCard">$300</p>
+                            <div class="animacionCard"><img src="../static/img/parejasHover.webp" alt="India">
+                            </div>
+                            </a>
+                    </div>
+            </div>
+        </div>
+        <hr>
+        <h3 class="ofertasTitle">Ofertas de último minuto</h3>
+        <div class="ofertasContainer">
+            <div class="glide">
+                <div class="glide__track" data-glide-el="track">
+                    <ul class="glide__slides">
+                        <li class="glide__slide">
+                            <a class="linkOfertas" href="">
+                            <div class="ofertasCard">
+                                <img src="../static/img/londres.webp" alt="Londres">
+                                <p class="ofertaspCardSuperior">Londres, UK</p>
+                                <p class="ofertaspCard">Desde €300 por persona</p>
+                            </div>
+                            </a>
+                        </li>
+                        <li class="glide__slide">
+                            <a class="linkOfertas" href="">
+                            <div class="ofertasCard">
+                                <img src="../static/img/Paris.webp" alt="Paris">
+                                <p class="ofertaspCardSuperior">Paris, Francia</p>
+                                <p class="ofertaspCard">Desde €300 por persona</p>
+                            </div>
+                            </a>
+                        </li>
+                        <li class="glide__slide">
+                            <a class="linkOfertas" href="">
+                            <div class="ofertasCard">
+                                <img src="../static/img/BuenosAires.webp" alt="Buenos Aires">
+                                <p class="ofertaspCardSuperior">Buenos Aires, Argentina</p>
+                                <p class="ofertaspCard">Desde €300 por persona</p>
+                            </div>
+                            </a>
+                        </li>
+                        <li class="glide__slide">            
+                            <a class="linkOfertas" href="">
+                            <div class="ofertasCard">
+                                <img src="../static/img/newYork.webp" alt="New York">
+                                <p class="ofertaspCardSuperior">New York, USA</p>
+                                <p class="ofertaspCard">Desde €300 por persona</p>
+                            </div>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="glide__arrows" data-glide-el="controls">
+                    <button class="glide__arrow glide__arrow--left" data-glide-dir="&lt;">&lt;</button>
+                    <button class="glide__arrow glide__arrow--right" data-glide-dir="&gt;">&gt;</button>
+                </div>
+            </div>
+        </div>
+    </main>
+    <footer class="footer" >
+        <div class="footerSuperior">
+            <div class="parrafoFooter">
+                <h3 class="titleFooter">Sobre nosotros</h3>
+                <ul>
+                    <li><a href="{{ url_for('quienessomos') }}">Quienes somos</a></li>
+                    <li><a href="#">Agencias</a></li>
+                    <li><a href="#">Trabaja con nosotros</a></li>
+                    <li><a href="#">Afiliados</a></li>
+                    <li><a href="#"></a></li>
+                </ul>
+            </div>
+            <div class="parrafoFooter">
+                <h3 class="titleFooter">Planea tus viajes</h3>
+                <ul>
+                    <li><a href="#">Blog de viajes</a></li>
+                    <li><a href="#">Guia de viajes</a></li>
+                    <li><a href="#">Catalogos</a></li>
+                    <li><a href="#">Turismo accesible</a></li>
+                    <li><a href="#">Viajes de lujo</a></li>
+                </ul>
+            </div>
+            <div class="parrafoFooter">
+                <h3 class="titleFooter">Informacion importante</h3>
+                <ul>
+                    <li><a href="#">Condiciones generales</a></li>
+                    <li><a href="#">Politica de privacidad</a></li>
+                    <li><a href="#">Centro de ayuda</a></li>
+                    <li><a href="#">Politica de cookies</a></li>
+                </ul>
+            </div>
+            <div class="redesSociales">
+                <h3 class="titleFooter">Seguinos en:</h3>
+                <ul>
+                    <li><a href="#"><i class="fa-brands fa-square-facebook iconosRedes"></i></a></li>
+                    <li><a href="#"><i class="fa-brands fa-instagram iconosRedes"></i></a></li>
+                    <li><a href="#"><i class="fa-brands fa-youtube iconosRedes"></i></a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footerInferior">
+            <p class="parrafoFooter">La Hormiguita Viajera | todos los derechos reservados.</p>
+        </div>
+    </footer>
+    <script src="../static/Js/carrousel.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@glidejs/glide"></script>
+    
+    <script>
+        // Definir una función para inicializar Glide con la configuración adecuada
+        function initializeGlide() {
+            // Obtener el ancho de la ventana
+            const screenWidth = window.innerWidth;
+    
+            // Configurar el número de vistas según el ancho de la ventana
+            const perView = screenWidth < 769 ? 1 : 4;
+    
+            // Configuración de Glide
+            const config = {
+                type: 'carousel',
+                perView: perView
+            };
+        new Glide('.glide', config).mount();
+        }
+        
+        document.addEventListener('DOMContentLoaded', initializeGlide);
+
+        initializeGlide();
+    </script>
+</body>
+</html>

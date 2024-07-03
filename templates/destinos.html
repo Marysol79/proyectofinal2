@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Destinos | La hormiga Viajera </title>
+    <link rel="icon" type="image/x-icon" href="../static/img/logoazul.png">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Rubik&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/f3cd9eb1cb.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <header class="header">
+        <div><a href="{{ url_for('Index') }}"><img  class="logoMain" src="../static/img/logoazul.png" alt="logo de una hormiga viajera"></a></div>
+        <input type="checkbox" id="menu-toggle">
+        <label for="menu-toggle" class="menu-icon">&#9776;</label> 
+        <nav class="headernav">
+                <ul>
+                    <li><a class="linkNav" href="{{ url_for('Index') }}">HOME</a></li>
+                    <li><a class="linkNav" href="{{ url_for('tiposdeviajes')}}">TIPOS DE VIAJES</a></li>
+                    <li><a class="linkNav" href="{{ url_for('vuelos') }}">VUELOS</a></li>
+                    <li><a class="linkNav" href="{{ url_for('galeria') }}">GALERIA DE FOTOS</a></li>
+                    <li><a class="linkNav" href="{{ url_for('quienessomos') }}">¿QUIENES SOMOS?</a></li>
+                    <li><a class="linkNav" href="{{ url_for('formularioConsultas') }}">CONTACTOS</a></li>
+                </ul> 
+            </nav>
+    </header>
+    <main class="destinosMain">
+        <div class="destinosPrincipal">
+            <h2 class="title">Destinos</h2>
+            <div class="contenedorDestinos">
+                    <div class="destinosCard">
+                        <img class="backgroundDestino" src="../static/img/Paris.webp" alt="Torre Eiffel">
+                        <a class="destinosLink" href="#">
+                        <h3 class="destinosTitle">París, Francia</h3>
+                        <p class="destinosParrafo">Conocida como "La Ciudad del Amor", París es famosa por la Torre Eiffel, el Museo del Louvre y sus encantadores cafés y boulangeries. Es un destino ideal para los amantes del arte, la historia y la gastronomía.
+                        </p>
+                        <div class="animacionImgDestino"><img src="../static/img/pexels-dreamypixel-547116.webp" alt=""></div>
+                        </a>
+                    </div>
+                    <div class="destinosCard">
+                        <img class="backgroundDestino" src="../static/img/KyotoCard.webp" alt="Puente de Kyoto">
+                        <a class="destinosLink" href="#">
+                        <h3 class="destinosTitle">Kyoto, Japón</h3>
+                        <p class="destinosParrafo">Kyoto es el corazón cultural de Japón, con templos históricos, jardines zen y geishas en el distrito de Gion. El Templo Kinkaku-ji (Pabellón Dorado) es uno de los principales atractivos.</p>
+                        <div class="animacionImgDestino"><img src="../static/img/kyotoHover.webp" alt=""></div>
+                        </a>
+                    </div>  
+                    <div class="destinosCard">
+                        <img class="backgroundDestino" src="../static/img/NewYorkCard.webp" alt="Toro de nueva York">
+                        <a class="destinosLink" href="#">
+                        <h3 class="destinosTitle">Nueva York, EE. UU</h3>
+                        <p class="destinosParrafo">La "Gran Manzana" ofrece una energía inigualable, con puntos icónicos como Times Square, Central Park, el Empire State Building y una vibrante escena de teatro en Broadway.</p>
+                        <div class="animacionImgDestino"><img src="../static/img/newYork.webp" alt="torre de la libertad">
+                        </div>
+                        </a>
+                    </div>
+                    <div class="destinosCard">
+                        <img class="backgroundDestino" src="../static/img/machupichuCard.webp" alt="Machu pichu">
+                        <a class="destinosLink" href="#">
+                        <h3 class="destinosTitle">Machu Picchu, Perú</h3>
+                        <p class="destinosParrafo">Esta antigua ciudad inca, situada en lo alto de los Andes, es uno de los sitios arqueológicos más famosos del mundo. Es una maravilla arquitectónica y un destino imprescindible para los amantes de la historia y la aventura.</p>
+                        <div class="animacionImgDestino"><img src="../static/img/machupichuHover.webp" alt="">
+                        </div>
+                        </a>
+                    </div>
+                    <div class="destinosCard">
+                        <img class="backgroundDestino" src="../static/img/romaCard.webp" alt="Fontana di Trevi">
+                        <a class="destinosLink" href="#">
+                        <h3 class="destinosTitle">Roma, Italia</h3>
+                        <p class="destinosParrafo">Roma es una ciudad donde la historia cobra vida, con monumentos emblemáticos como el Coliseo, el Vaticano, la Fontana di Trevi y el Panteón. La ciudad es un museo al aire libre con una rica herencia cultural y culinaria.</p>
+                        <div class="animacionImgDestino"><img src="../static/img/romaHover.webp" alt="Coliseo">
+                        </div>
+                        </a>
+                    </div>
+                    <div class="destinosCard">
+                        <img class="backgroundDestino" src="../static/img/SantoriCard.webp" alt="Cupula santori">
+                        <a class="destinosLink" href="#">
+                        <h3 class="destinosTitle">Santorini, Grecia</h3>
+                        <p class="destinosParrafo">Famosa por sus casas blancas con cúpulas azules, Santorini es una isla volcánica en el mar Egeo. Ofrece paisajes impresionantes, puestas de sol espectaculares y hermosas playas.</p>
+                        <div class="animacionImgDestino"><img src="../static/img/santoriHover.webp" alt="Santori">
+                        </div>
+                        </a>
+                    </div>
+                    <div class="destinosCard">
+                        <img class="backgroundDestino" src="../static/img/sydneycard.webp" alt="Bondi beach">
+                        <a class="destinosLink" href="#">
+                        <h3 class="destinosTitle">Sydney, Australia</h3>
+                        <p class="destinosParrafo">Con su emblemática Ópera de Sídney y el Puente del Puerto, esta ciudad australiana es conocida por sus playas, como Bondi Beach, y su animado estilo de vida urbano.</p>
+                        <div class="animacionImgDestino"><img src="../static/img/sydneyHover.webp" alt="Opera house">
+                        </div>
+                        </a>
+                    </div>
+                    <div class="destinosCard">
+                        <img class="backgroundDestino" src="../static/img/indiahover.webp" alt="India tower">
+                        <a class="destinosLink" href="#">
+                        <h3 class="destinosTitle">Agra, India</h3>
+                        <p class="destinosParrafo">Agra es conocida por albergar el Taj Mahal, uno de los monumentos más emblemáticos del mundo. Esta ciudad histórica ofrece una rica herencia mogol y otros sitios impresionantes como el Fuerte de Agra y Fatehpur Sikri.</p>
+                        <div class="animacionImgDestino"><img src="../static/img/indiaHover (1).webp" alt="Taj Mahal">
+                        </div>
+                        </a>
+                    </div>
+                    <div class="destinosCard">
+                        <img class="backgroundDestino" src="../static/img/reykjavikCard.webp" alt="reykjavik city">
+                        <a class="destinosLink" href="#">
+                        <h3 class="destinosTitle">Reykjavik, Islandia</h3>
+                        <p class="destinosParrafo">La capital de Islandia es famosa por sus paisajes naturales únicos, como géiseres, cascadas y auroras boreales. La Laguna Azul es una atracción popular para los visitantes que buscan relajarse en aguas termales.</p>
+                        <div class="animacionImgDestino"><img src="../static/img/reykjavikHover.webp" alt="Iglesia reykjavik">
+                        </div>
+                        </a>
+                    </div>    
+                    <div class="destinosCard">
+                        <img class="backgroundDestino" src="../static/img/brasilDestinoCard.webp" alt="Rio de Janeiro Ciudad">
+                        <a class="destinosLink" href="#">
+                        <h3 class="destinosTitle">Rio de Janeiro, Brasil</h3>
+                        <p class="destinosParrafo">Conocida por el Cristo Redentor, el Pan de Azúcar y sus playas famosas como Copacabana e Ipanema, Río es una ciudad llena de vida y cultura, famosa también por su carnaval.</p>
+                        <div class="animacionImgDestino"><img src="../static/img/brasilHover.webp" alt="Cristo Brasil">
+                        </div>
+                        </a>
+                    </div>
+                    <div class="destinosCard">
+                        <img class="backgroundDestino" src="../static/img/londresCard.webp" alt="londres City">
+                        <a class="destinosLink" href="#">
+                        <h3 class="destinosTitle">Londres, Reino Unido</h3>
+                        <p class="destinosParrafo">Londres es una ciudad vibrante y multicultural, conocida por sus históricos monumentos como el Big Ben, el Palacio de Buckingham y la Torre de Londres. Además, ofrece museos de clase mundial como el British Museum y una rica escena teatral en el West End.</p>
+                        <div class="animacionImgDestino"><img src="../static/img/londres.webp" alt="Big ben">
+                        </div>
+                        </a>
+                    </div>
+                    <div class="destinosCard">
+                        <img class="backgroundDestino" src="../static/img/buenosairesHover.webp" alt="Rosa metalica">
+                        <a class="destinosLink" href="#">
+                        <h3 class="destinosTitle">Buenos Aires, Arg</h3>
+                        <p class="destinosParrafo">La capital argentina es conocida por su rica vida cultural y nocturna, sus elegantes barrios como Recoleta y Palermo, y su pasión por el tango. La Plaza de Mayo y el barrio de La Boca son visitas ogadas.bli</p>
+                        <div class="animacionImgDestino"><img src="../static/img/BuenosAires.webp" alt="Rosa metalica">
+                        </div>
+                        </a>
+                    </div>
+            </div>
+        </div>
+    </main>
+    <footer class="footer" >
+        <div class="footerSuperior">
+            <div class="parrafoFooter">
+                <h3 class="titleFooter">Sobre nosotros</h3>
+                <ul>
+                    <li><a href="{{ url_for('quienessomos') }}">Quienes somos</a></li>
+                    <li><a href="#">Agencias</a></li>
+                    <li><a href="#">Trabaja con nosotros</a></li>
+                    <li><a href="#">Afiliados</a></li>
+                    <li><a href="#"></a></li>
+                </ul>
+            </div>
+            <div class="parrafoFooter">
+                <h3 class="titleFooter">Planea tus viajes</h3>
+                <ul>
+                    <li><a href="#">Blog de viajes</a></li>
+                    <li><a href="#">Guia de viajes</a></li>
+                    <li><a href="#">Catalogos</a></li>
+                    <li><a href="#">Turismo accesible</a></li>
+                    <li><a href="#">Viajes de lujo</a></li>
+                </ul>
+            </div>
+            <div class="parrafoFooter">
+                <h3 class="titleFooter">Informacion importante</h3>
+                <ul>
+                    <li><a href="#">Condiciones generales</a></li>
+                    <li><a href="#">Politica de privacidad</a></li>
+                    <li><a href="#">Centro de ayuda</a></li>
+                    <li><a href="#">Politica de cookies</a></li>
+                </ul>
+            </div>
+            <div class="redesSociales">
+                <h3 class="titleFooter">Seguinos en:</h3>
+                <ul>
+                    <li><a href="#"><i class="fa-brands fa-square-facebook iconosRedes"></i></a></li>
+                    <li><a href="#"><i class="fa-brands fa-instagram iconosRedes"></i></a></li>
+                    <li><a href="#"><i class="fa-brands fa-youtube iconosRedes"></i></a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footerInferior">
+            <p class="parrafoFooter">La Hormiguita viajera | todos los derechos reservados.</p>
+        </div>
+    </footer>
+</body>
+</html>
